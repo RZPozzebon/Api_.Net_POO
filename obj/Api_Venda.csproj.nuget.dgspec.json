@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj": {}
+    "d:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj": {}
   },
   "projects": {
-    "D:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj": {
+    "d:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj",
+        "projectUniqueName": "d:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj",
         "projectName": "Api_Venda",
-        "projectPath": "D:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj",
+        "projectPath": "d:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\Api_Venda.csproj",
         "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\obj\\",
+        "outputPath": "d:\\Projetos_Estudos\\C#\\Api_.Net_POO\\Api_Venda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,12 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
             },

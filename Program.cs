@@ -1,4 +1,6 @@
 using Api_Venda.Migrations.Data;
+using Api_Venda.Repositories;
+using Api_Venda.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,8 @@ builder.Services.AddSwaggerGen();
 // Configurando string connection
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
                                                     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IRepositoryCliente, RepositoryCliente>();
 
 var app = builder.Build();
 

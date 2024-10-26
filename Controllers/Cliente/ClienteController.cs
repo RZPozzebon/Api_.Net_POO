@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Api_Venda.Model;
+using Api_Venda.Models;
 using Api_Venda.Services;
 
 namespace Api_Venda.Controllers.ClienteController
@@ -8,14 +8,17 @@ namespace Api_Venda.Controllers.ClienteController
     [Route("[controller]")]
     public class ClienteController : ControllerBase
     {
+        // Atributos
         private readonly ILogger<ClienteController> _logger;
         private ServiceCliente _clienteService;
-
-        public ClienteController(ILogger<ClienteController> logger)
+        // Construtor
+        public ClienteController(ILogger<ClienteController> logger, ServiceCliente clienteService)
         {
             _logger = logger;
-            _clienteService = new ServiceCliente();
+            _clienteService = clienteService;
         }
+
+        // Metodos 
         [HttpGet]
         public IEnumerable<Cliente> Get()
         {
@@ -27,7 +30,10 @@ namespace Api_Venda.Controllers.ClienteController
         [HttpPost]
         public void Post()
         {
-            
+            //var cliente = new Cliente();
+
+
+            // _clienteService.SalvarCliente(cliente);
         }
     }
 }

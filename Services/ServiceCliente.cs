@@ -1,21 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Api_Venda.Model;
-using Api_Venda.Repositories;
+using Api_Venda.Models;
+using Api_Venda.Repositories.Interfaces;
 using Api_Venda.Services.Interfaces;
 
 namespace Api_Venda.Services
 {
     public class ServiceCliente : IServiceCliente
     {
-        private RepositoryCliente? _repositoryCliente;
+        private readonly IRepositoryCliente _repositoryCliente;
 
-        public ServiceCliente()
+        public ServiceCliente(IRepositoryCliente repositoryCliente)
         {
-            _repositoryCliente = new RepositoryCliente();
+            _repositoryCliente = repositoryCliente;
         }
+
         public IEnumerable<Cliente> BuscarClientes()
         {
             // Chama minha camada Repositorio
@@ -28,7 +25,8 @@ namespace Api_Venda.Services
 
         public int SalvarCliente(Cliente cliente)
         {
-            return _repositoryCliente!.SalvarCliente(cliente);
+            //return _repositoryCliente.SalvarCliente(cliente);
+            return 0;
         }
     }
 }
