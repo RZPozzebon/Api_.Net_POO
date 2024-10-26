@@ -10,15 +10,25 @@ namespace Api_Venda.Services
 {
     public class ServiceCliente : IServiceCliente
     {
-        private RepositoryCliente? repositoryCliente;
+        private RepositoryCliente? _repositoryCliente;
+
+        public ServiceCliente()
+        {
+            _repositoryCliente = new RepositoryCliente();
+        }
         public IEnumerable<Cliente> BuscarClientes()
         {
             // Chama minha camada Repositorio
-            repositoryCliente = new RepositoryCliente();
-            return repositoryCliente.BuscarClientes();
+
+            return _repositoryCliente!.BuscarClientes();
 
             // Implementar Logica para buscar cliente e chamar camada repository
             throw new NotImplementedException();
+        }
+
+        public int SalvarCliente(Cliente cliente)
+        {
+            return _repositoryCliente!.SalvarCliente(cliente);
         }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 namespace Api_Venda.Model;
 public class Pessoa
 {
-    public string? nome;
-    public string? sobrenome;
-    public string? dataNascimento;
+    public required string nome;
+    public required string sobrenome;
+    public required string dataNascimento;
+    public required char sexo { get; set; }
 }

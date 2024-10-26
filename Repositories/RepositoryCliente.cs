@@ -14,5 +14,10 @@ namespace Api_Venda.Repositories
             // Logica para acessar dados no banco de dados
             throw new NotImplementedException();
         }
+
+        public int SalvarCliente(Cliente cliente)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

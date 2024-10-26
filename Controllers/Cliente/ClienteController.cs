@@ -9,19 +9,25 @@ namespace Api_Venda.Controllers.ClienteController
     public class ClienteController : ControllerBase
     {
         private readonly ILogger<ClienteController> _logger;
-        private ServiceCliente clienteService;
+        private ServiceCliente _clienteService;
 
         public ClienteController(ILogger<ClienteController> logger)
         {
             _logger = logger;
-            clienteService = new ServiceCliente();
+            _clienteService = new ServiceCliente();
         }
         [HttpGet]
         public IEnumerable<Cliente> Get()
         {
             //Chama a service;
-            var listaCliente = clienteService.BuscarClientes();
+            var listaCliente = _clienteService.BuscarClientes();
             return listaCliente;
+        }
+
+        [HttpPost]
+        public void Post()
+        {
+            
         }
     }
 }
